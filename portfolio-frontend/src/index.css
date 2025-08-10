@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   Black-Gold Minimal Theme
+   ========================= */
+:root {
+  --bg-0: #0b0e14;
+  --bg-1: #0f141c;
+  --bg-2: #121826;
+  --gold-1: #F5D97E;
+  --text: #F8FAFC;
+  --muted: #A8B0BE;
+  --border: rgba(197, 155, 47, .25);
+  --shadow: 0 10px 24px rgba(0, 0, 0, .45);
+}
+
+/* Page background with layered gradients */
+.g-page {
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(245, 217, 126, .10), transparent 60%),
+    radial-gradient(900px 500px at 80% 110%, rgba(212, 175, 55, .08), transparent 60%),
+    linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 60%, var(--bg-2) 100%);
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background: linear-gradient(145deg, #0b0f17 0%, #121722 100%);
+  transition: transform .15s ease, border-color .15s ease;
+}
+.card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(245, 217, 126, .35);
+}
+
+/* KPI cards */
+.kpi {
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background:
+    radial-gradient(120% 140% at 12% -10%, rgba(245, 217, 126, .18), transparent 40%),
+    linear-gradient(160deg, #0b0f17 0%, #141A25 100%);
+}
+.kpi .label {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #E7E1CC;
+}
+.kpi .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Returns Snapshot */
+.rs-card {
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  background:
+    radial-gradient(120% 140% at 90% 10%, rgba(212, 175, 55, .12), transparent 45%),
+    linear-gradient(150deg, #0b0f17 0%, #121722 100%);
+}
+.rs-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.rs-box {
+  border-radius: .75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .07);
+}
+.rs-box-title {
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  color: #E7E1CC;
+}
+.rs-pos {
+  color: #22c55e;
+  font-weight: 600;
+}
+.rs-neg {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Table */
+.table {
+  min-width: 100%;
+  font-size: .9rem;
+}
+.thead th {
+  padding: .5rem .75rem;
+  text-align: left;
+  color: #E7E1CC;
+  background: rgba(255, 255, 255, .03);
+}
+.trow {
+  border-top: 1px solid rgba(255, 255, 255, .06);
+}
+.trow:hover {
+  background: rgba(255, 255, 255, .03);
+}
+.tcell {
+  padding: .5rem .75rem;
+}
+
+/* Badges */
+.badge-pos {
+  color: #22c55e;
+  font-weight: 600;
+}
+.badge-neg {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Legend */
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .6);
+}
+
+/* Stock Avatar */
+.stock-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #111827;
+  background: radial-gradient(120% 140% at 30% 10%, var(--gold-1), #D4AF37);
+  box-shadow:
+    inset 0 0 6px rgba(0, 0, 0, .25),
+    0 1px 2px rgba(0, 0, 0, .5);
+  border: 1px solid rgba(213, 175, 55, .6);
+}
+
+/* Modal */
+.modal-header {
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #F5D97E 0%, #D4AF37 100%);
+  color: #0f141c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-title {
+  font-weight: 700;
+}
+.modal-close {
+  border-radius: 10px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, .08);
+}
+.modal-close:hover {
+  background: rgba(0, 0, 0, .14);
+}

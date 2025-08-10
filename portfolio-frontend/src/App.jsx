@@ -227,6 +227,7 @@ export default function App(){
             </table>
           </div>
         </div>
+<TopPerformers summary={summary} holdings={holdings} />
 
         {/* Modal (gold header + company logo handled in Modal component) */}
         <Modal open={!!sel} onClose={()=>setSel(null)} title={sel?.name} symbol={sel?.symbol} name={sel?.name}>
